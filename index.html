@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Live Weather</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <div class="searchBar">
+      <div class="searchBarParentDiv">
+        <input type="text" class="inputfield" placeholder="SearchCity" />
+        <img src="./Images/search.png" alt="" class="searchicon" />
+      </div>
+    </div>
+
+    <div class="mainContentParentDiv d-flex">
+      <div class="leftDiv">
+        <div class="currentTempDiv leftChild ps-3 pt-2 d-flex flex-column gap-2">
+          <h6 class="m-0" id="cityName">City Name</h6>
+          <h5 class="m-0" ><span id="cityTemp">Temp</span> &deg;C</h5>
+          <h6 class="m-0" id="cityDesc">Sky Discription</h6>
+          <hr class="line" />
+          <div class="d-flex gap-2">
+            <img src="./Images/calendar.png" alt="" width="25px" />
+            <h6 class="m-0" id="date">Date ----</h6>
+          </div>
+          <div class="d-flex  gap-2">
+            <img src="./Images/clock.png" alt="" width="25px" id="time-img" />
+            <h6 class="m-0" id="time">Time ----</h6>
+          </div>
+        </div>
+        <div class="nextFiveDays leftChild  p-3 d-flex flex-column gap-2">
+          <h6 class="m-0" id="comingFiveDays">Coming 5 Days</h6>
+          <div class="d-flex flex-column gap-2">
+            <div
+              class="forecastRow d-flex align-items-center justify-content-between"
+            >
+              <div class="d-flex gap-1 align-items-center justify-content-center">
+                <img
+                  src="./Images/cloud.png"
+                  alt=""
+                  width="25px"
+                  id="cloud-img-1"
+                />
+                <h6 class="m-0" id="tempone">Temp &deg;C</h6>
+              </div>
+              <h6 class="m-0" id="dayone">-- Day --</h6>
+              <h6 class="m-0" id="dayonedate">-- Date --</h6>
+            </div>
+            <div
+              class="forecastRow d-flex align-items-center justify-content-between"
+            >
+              <div class="d-flex gap-1 align-items-center">
+                <img
+                  src="./Images/cloud.png"
+                  alt=""
+                  width="25px"
+                  id="cloud-img-2"
+                />
+                <h6 class="m-0" id="temptwo">Temp &deg;C</h6>
+              </div>
+              <h6 class="m-0"  id="daytwo">-- Day --</h6>
+              <h6 class="m-0" id="daytwodate">-- Date --</h6>
+            </div>
+            <div
+              class="forecastRow d-flex align-items-center justify-content-between"
+            >
+              <div class="d-flex gap-1 align-items-center">
+                <img
+                  src="./Images/cloud.png"
+                  alt=""
+                  width="25px"
+                  id="cloud-img-3"
+                />
+                <h6 class="m-0" id="tempthree">Temp &deg;C</h6>
+              </div>
+              <h6 class="m-0"  id="daythree">-- Day --</h6>
+              <h6 class="m-0" id="daythreedate">-- Date --</h6>
+            </div>
+            <div
+              class="forecastRow d-flex align-items-center justify-content-between"
+            >
+              <div class="d-flex gap-1 align-items-center">
+                <img
+                  src="./Images/cloud.png"
+                  alt=""
+                  width="25px"
+                  id="cloud-img-4"
+                />
+                <h6 class="m-0" id="tempfour">Temp &deg;C</h6>
+              </div>
+              <h6 class="m-0"  id="dayfour">-- Day --</h6>
+              <h6 class="m-0"  id="dayfourdate">-- Date --</h6>
+            </div>
+            <div
+              class="forecastRow d-flex align-items-center justify-content-between"
+            >
+              <div class="d-flex gap-1 align-items-center">
+                <img
+                  src="./Images/cloud.png"
+                  alt=""
+                  width="25px"
+                  id="cloud-img-5"
+                />
+                <h6 class="m-0" id="tempfive">Temp &deg;C</h6>
+              </div>
+              <h6 class="m-0" id="dayfive">-- Day --</h6>
+              <h6 class="m-0"  id="dayfivedate">-- Date --</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rightDiv">
+        <div
+          class="rightRow rowOne d-flex gap-2 justify-content-between align-items-center"
+        >
+          <div class="extraMetric d-flex gap-3">
+            <img src="./Images/humidity.png" alt="" width="35px" />
+            <div>
+              <h6 class="m-0" >Humidity</h6>
+              <h6 class="m-0" id="humidityvalue">__</h6>
+            </div>
+          </div>
+          <div class="extraMetric d-flex gap-2">
+            <img src="./Images/wind-power.png" alt="" width="35px" />
+            <div>
+              <h6 class="m-0">Pressure</h6>
+              <h6 class="m-0" id="pressurevalue">__</h6>
+            </div>
+          </div>
+          <div class="extraMetric d-flex gap-3">
+            <img src="./Images/feels.png" alt="" width="35px" />
+            <div>
+              <h6 class="m-0">Feels like</h6>
+              <h6 class="m-0" id="feelslikevalue">__</h6>
+            </div>
+          </div>
+          <div class="extraMetric d-flex gap-3">
+            <img src="./Images/eye.png" alt="" width="35px" />
+            <div>
+              <h6 class="m-0 ">Visibility</h6>
+              <h6 class="m-0" id="visibilityvalue">__</h6>
+            </div>
+          </div>
+        </div>
+        <div
+          class="rightRow rowtwo d-flex justify-content-between align-items-center"
+        >
+          <div class="AQI rowTwoDiv p-3 d-flex flex-column gap-2">
+            <h5>Air Quality Index(AQI)</h5>
+            <div class="d-flex align-items-center justify-content-between pe-2 ">
+              <img src="./Images/air-pollution.png" alt="" width="55px" />
+              <div class="text-center pe-4">
+                <h6 id="co">AQI Metric</h6>
+                <h6 id="coValue">0</h6>
+              </div>
+              <div class="text-center">
+                <h6 id="so2">AQI Metric</h6>
+                <h6 id="so2Value">0</h6>
+              </div>
+              <div class="text-center">
+                <h6 id="o3">AQI Metric</h6>
+                <h6 id="o3Value">0</h6>
+              </div>
+              <div class="text-center">
+                <h6 id="no2">AQI Metric</h6>
+                <h6 id="no2Value">0</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="sunRise rowTwoDiv p-3 gap-2">
+            <h5 class="m-0">Sunrise & Sunset</h5>
+            <div class="d-flex justify-content-between">
+              <div class="SunriseDiv d-flex gap-1 align-items-center">
+                <img src="./Images/sunrise.png" alt="" width="75px" />
+                <div class="d-flex flex-column gap-2">
+                  <h6 class="m-0">Sunrise</h6>
+                  <h5 class="m-0" id="sunrisetime">____</h5>
+                </div>
+              </div>
+              <div class="SunsetDiv d-flex align-items-center gap-1">
+                <img src="./Images/sunset.png" alt="" width="65px" />
+                <div class="d-flex flex-column gap-2">
+                  <h6 class="m-0">Sunset</h6>
+                  <h5 class="m-0" id="sunsettime">____</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rightRow rowThree d-flex flex-column gap-2">
+          <h5 class="m-0">Today</h5>
+          <div class="d-flex justify-content-between todayTempParentDiv">
+            <div class="todayTemp">
+              <h6 class="m-0" id="time1">--TIME--</h6>
+              <img src="./Images/cloudy.png" alt=""  />
+              <h5><span id="time1t">__</span> &deg;C</h5>
+            </div>
+            <div class="todayTemp">
+              <h6 class="m-0" id="time2">--TIME--</h6>
+              <img src="./Images/cloudy.png" alt=""  />
+              <h5><span id="time2t">__</span> &deg;C</h5>
+            </div>
+            <div class="todayTemp">
+              <h6 class="m-0" id="time3">--TIME--</h6>
+              <img src="./Images/cloudy.png" alt=""  />
+              <h5><span id="time3t">__</span> &deg;C</h5>
+            </div>
+            <div class="todayTemp">
+              <h6 class="m-0" id="time4">--TIME--</h6>
+              <img src="./Images/cloudy.png" alt="" />
+              <h5><span id="time4t">__</span>&deg;C</h5>
+            </div>
+            <div class="todayTemp">
+              <h6 class="m-0" id="time5">--TIME--</h6>
+              <img src="./Images/cloudy.png" alt=""  />
+              <h5><span id="time5t">__</span> &deg;C</h5>
+            </div>
+            <div class="todayTemp">
+              <h6 class="m-0" id="time6">--TIME--</h6>
+              <img src="./Images/cloudy.png" alt="" />
+              <h5><span id="time6t">__</span> &deg;C</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   <footer class="weatherFooter">
+    <p class="m-0">
+        Developed by <span>CPR</span> | Powered by OpenWeather API
+    </p>
+</footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
