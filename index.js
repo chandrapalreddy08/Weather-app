@@ -317,7 +317,7 @@ formatfivdata.list.forEach((items)=>{
 console.log("88888888888888888888******************",uniuedates);
 
 let todayAllData = formatfivdata.list.filter((filteritems)=> {
-  return filteritems.dt_txt.startsWith(uniuedates[0])
+  return filteritems.dt_txt.startsWith(uniuedates[1])
 })
 
 console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",todayAllData);
