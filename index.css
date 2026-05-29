@@ -207,11 +207,67 @@ body {
       inset -2px -2px 5px rgba(0,0,0,0.5),
       12px 12px 28px rgba(0,0,0,0.55),
       -6px -6px 16px rgba(148,163,184,0.18);
+
 }
 
 .todayTemp img {
     border-radius: 100%;
     width: 55px;
+}
+
+.weatherFooter{
+    width: 100%;
+    margin-top: 30px;
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(10px);
+
+    border-top: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 0 20px rgba(255,255,255,0.15);
+
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    position: relative;
+    top: 90px;
+
+     display: none;
+}
+
+.weatherFooter span{
+    color: #7fd6ff;
+    font-weight: 600;
+}
+
+.weatherFootertwo{
+    width: 100%;
+    margin-top: 30px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(10px);
+
+    border-top: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 0 20px rgba(255,255,255,0.15);
+
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    position: relative;
+    bottom: 2px;
+
+}
+
+.weatherFooterone span{
+    color: #7fd6ff;
+    font-weight: 600;
 }
 
 
@@ -273,6 +329,13 @@ body {
         flex-wrap: wrap;
         margin: auto;
         gap: 15px;
+    }
+
+    .weatherFooter {
+        display: block;
+    }
+    .weatherFootertwo {
+        display: none;
     }
     
 }
