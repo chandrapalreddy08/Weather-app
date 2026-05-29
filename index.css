@@ -344,13 +344,13 @@ html, body {
     .rowThree {
         width: 85% ;
         margin: auto;
-        padding-top: 60px;
+        margin-top: 60px;
         padding-bottom:5px ;
 
     }
     
     .todayTempParentDiv {
-        width: 100%;
+        max-width: 100%;
         flex-wrap: wrap;
         margin: auto;
         gap: 15px;
