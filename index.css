@@ -333,6 +333,7 @@ body {
 
     .weatherFooter {
         display: block;
+        margin-top: 150px;
     }
     .weatherFootertwo {
         display: none;
