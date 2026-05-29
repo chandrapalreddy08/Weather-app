@@ -314,14 +314,14 @@ html, body {
         width: 100% ;
     }
     .searchBarParentDiv {
-        width: 85%;
+        width: 85% !important;
         height: fit-content;
         position: relative;
     }
     .rowOne {
         /* flex-direction: column; */
         flex-wrap: wrap;
-        width:85%;
+        width:85% !important;
         margin: auto;
     }
     .rowtwo {
@@ -334,12 +334,12 @@ html, body {
     }
 
     .rowTwoDiv {
-        width: 95%;
+        width: 95% !important;
 
     }
 
     .rowThree {
-        width: 85%;
+        width: 85% !important;
         margin: auto;
         padding-top: 10px;
         padding-bottom:5px ;
@@ -355,8 +355,9 @@ html, body {
 
     .weatherFooter {
         display: block;
-        margin-top: 200px;
+        margin-top: 500px;
         margin-bottom: 100px;
+        padding-bottom: 50px;
     }
     .weatherFootertwo {
         display: none;
