@@ -296,7 +296,7 @@ html, body {
 
     .leftDiv {
         width: 100% !important;
-        height: 100%;
+        height: auto;
         display: flex;
         flex-direction: column;
         gap: 15px;
@@ -304,10 +304,10 @@ html, body {
     }
     .rightDiv {
         width: 100% !important;
-        padding-right: 0%;
+        height: auto;
     }
     .mainContentParentDiv {
-        height: 90vh;
+        min-height: 90vh;
         flex-direction: column;
     }
     .searchBar {
@@ -355,9 +355,7 @@ html, body {
 
     .weatherFooter {
         display: block;
-        margin-top: 500px;
-        margin-bottom: 100px;
-        padding-bottom: 50px;
+        margin-top: 200px;
     }
     .weatherFootertwo {
         display: none;
