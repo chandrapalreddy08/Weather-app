@@ -326,7 +326,7 @@ console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",todayAllData);
 
 //===========
 let specificTimeData = todayAllData.find((itemone) => {
-  return itemone.dt_txt.split(" ")[1] === "06:00:00";
+  return itemone.dt_txt.split(" ")[0] === "06:00:00";
 });
 
 
@@ -352,7 +352,7 @@ console.log("SPECIFIC TIME DATA ONE =====", specificTimeData);
 
 //===============
 let specificTimeDataTwo = todayAllData.find((itemtwo)=>{
-  return itemtwo.dt_txt.split(" ")[1] === "09:00:00";
+  return itemtwo.dt_txt.split(" ")[0] === "09:00:00";
 })
 
 
@@ -379,7 +379,7 @@ console.log("TIME DATA 2",specificTimeDataTwo);
 
 //==========
 let specificTimeDataThree = todayAllData.find((itemthree)=>{
-  return itemthree.dt_txt.split(" ")[1] === "12:00:00"
+  return itemthree.dt_txt.split(" ")[0] === "12:00:00"
 })
 
 
@@ -407,7 +407,7 @@ console.log("TIME DATA 3",specificTimeDataThree);
 //===================
 
 let specificTimeDataFour = todayAllData.find((itemfour)=>{
-  return itemfour.dt_txt.split(" ")[1] === "15:00:00"
+  return itemfour.dt_txt.split(" ")[0] === "15:00:00"
 })
 
 if (specificTimeDataFour) {
@@ -434,7 +434,7 @@ console.log("TIME DATA 4",specificTimeDataFour);
 //==================
 
 let specificTimeDataFive = todayAllData.find((itemfive)=>{
-  return itemfive.dt_txt.split(" ")[1] === "18:00:00"
+  return itemfive.dt_txt.split(" ")[0] === "18:00:00"
 })
 
 
@@ -461,12 +461,12 @@ console.log("TIME DATA 5",specificTimeDataFive);
 //=============
 
 let specificTimeDataSix = todayAllData.find((itemsix) => {
-  return itemsix.dt_txt.split(" ")[1] === "21:00:00";
+  return itemsix.dt_txt.split(" ")[0] === "21:00:00";
 });
 
 if (specificTimeDataSix) {
 
-  let six = specificTimeDataSix.main.temp;  // FIXED
+  let six = specificTimeDataSix.main.temp;  
 
   $("#time6")[0].innerText =
     new Date(specificTimeDataSix.dt_txt)
